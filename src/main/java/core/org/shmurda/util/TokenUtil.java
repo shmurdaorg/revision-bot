@@ -15,7 +15,7 @@ import java.util.Scanner;
 public class TokenUtil {
 
     /**
-     * Code from https://github.com/PolyMarsDev/Sokobot
+     * Code modified from https://github.com/PolyMarsDev/Sokobot
      *
      * @throws IOException Error when creating file.
      */

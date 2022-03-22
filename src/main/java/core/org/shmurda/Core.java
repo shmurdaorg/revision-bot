@@ -27,6 +27,10 @@ public class Core {
     @Getter @Setter
     private String commandPrefix = "."; // Set this to . by default
 
+    public Core() {
+        new Core(null);
+    }
+    
     public Core(String token) {
         new Core(token, new ArrayList<>(Arrays.asList(
                 /* Default values if you don't want to pass some intents in start. */
