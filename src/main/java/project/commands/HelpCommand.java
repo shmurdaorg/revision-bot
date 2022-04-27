@@ -1,8 +1,8 @@
 package project.commands;
 
+import core.org.shmurda.core.Core;
 import core.org.shmurda.core.command.Command;
 import core.org.shmurda.core.command.event.CommandEvent;
-import core.org.shmurda.core.util.ColourUtil;
 import net.dv8tion.jda.api.EmbedBuilder;
 
 import java.time.Instant;
@@ -21,7 +21,7 @@ public class HelpCommand extends Command {
 
         event.replyEmbed(new EmbedBuilder()
                 .setTitle("Help Menu")
-                .setColor(ColourUtil.nextColour())
+                .setColor(Core.getInstance().rgb())
                 .addField("help", "does some shit", true)
                 .setTimestamp(Instant.now()));
     }
