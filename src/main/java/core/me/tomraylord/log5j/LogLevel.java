@@ -6,10 +6,10 @@ import lombok.Getter;
 @AllArgsConstructor @Getter
 public enum LogLevel {
 
-    INFO("[INFO] ", false),
-    WARN("[WARN] ", false),
-    ERROR("[ERROR] ", false),
-    SEVERE("[SEVERE] ", true);
+    INFO("[INFO %s] ", false),
+    WARN("[WARN %s] ", false),
+    ERROR("[ERROR %s] ", false),
+    SEVERE("[SEVERE %s] ", true);
 
     private final String prefix;
     private final boolean stop;

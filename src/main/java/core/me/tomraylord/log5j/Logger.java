@@ -4,6 +4,10 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.time.Instant;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 
 /**
  * Code taken from an old project of mine, I present you log5j.
@@ -33,7 +37,11 @@ public class Logger {
     }
 
     public void log(LogLevel logLevel, String message) {
-        String out = logLevel.getPrefix() + message;
+        Instant instant = Instant.now();
+        ZonedDateTime timezone = instant.atZone(ZoneId.of("GMT"));
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEE HH:mm:ss");
+
+        String out = String.format(logLevel.getPrefix(), formatter.format(timezone) + " GMT") + message;
 
         System.out.println(out);
         output.println(out);

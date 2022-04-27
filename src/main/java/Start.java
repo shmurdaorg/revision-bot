@@ -1,4 +1,4 @@
-import core.org.shmurda.Core;
+import core.org.shmurda.core.Core;
 import project.Bot;
 
 public class Start {

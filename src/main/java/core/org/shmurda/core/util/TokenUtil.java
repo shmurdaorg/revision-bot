@@ -1,8 +1,8 @@
-package core.org.shmurda.util;
+package core.org.shmurda.core.util;
 
 import core.me.tomraylord.log5j.LogLevel;
 import core.me.tomraylord.log5j.Logger;
-import core.org.shmurda.Core;
+import core.org.shmurda.core.Core;
 import lombok.experimental.UtilityClass;
 
 import java.io.File;
@@ -40,6 +40,8 @@ public class TokenUtil {
             }
 
             scanner.close();
+        } else {
+            Core.getInstance().setBotToken(new String(Files.readAllBytes(file.toPath())));
         }
     }
 
