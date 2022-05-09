@@ -1,2 +1,2 @@
 # CoreBot
- JDA bot without boilerplate and utility.
+🤖 JDA bot base with utility.
