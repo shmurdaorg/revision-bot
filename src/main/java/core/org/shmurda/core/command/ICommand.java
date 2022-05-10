@@ -4,6 +4,6 @@ import core.org.shmurda.core.command.event.CommandEvent;
 
 public interface ICommand {
 
-    void handle(CommandEvent event);
+    void handle(CommandEvent cmd);
 
 }

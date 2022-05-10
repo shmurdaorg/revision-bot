@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.shmurda</groupId>
-    <artifactId>CoreBot</artifactId>
+    <artifactId>revision-bot</artifactId>
     <version>1.0</version>
 
     <build>
@@ -15,7 +15,7 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>2.3.1</version>
                 <configuration>
-                    <outputDirectory>${project.basedir}/out/</outputDirectory>
+                    <outputDirectory>${project.basedir}/built/</outputDirectory>
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
@@ -67,6 +67,19 @@
                     <artifactId>opus-java</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+
+        <!--<dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.9.0</version>
+        </dependency>-->
+
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongo-java-driver</artifactId>
+            <version>3.8.2</version>
+            <scope>compile</scope>
         </dependency>
 
         <dependency>
